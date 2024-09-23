@@ -2,7 +2,7 @@ from django.db import models
 from app.enums.estadoCurso import EstadoCurso
 
 class Egressos(models.Model):
-    cpf = models.CharField(max_length=11, primary_key=True)
+    cpf = models.CharField(max_length=11, primary_key=True, unique=True)
     nome = models.CharField(max_length=80)
     tel = models.CharField(max_length=14)
     email = models.CharField(max_length=80)
